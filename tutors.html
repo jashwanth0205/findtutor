@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tuto Link • Tutors</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="brand">Tuto Link</div>
+    <nav class="nav">
+      <a href="home.html">Home</a>
+      <a href="tutors.html" class="active">Find Tutors</a>
+      <button id="logoutBtn" class="btn outline">Logout</button>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="search">
+      <h2>Find Tutors Near You</h2>
+      <form id="searchForm" class="form inline">
+        <div class="form-row">
+          <label>Location</label>
+          <div class="input-with-action">
+            <input type="text" id="location" placeholder="Start typing..." autocomplete="off" required />
+            <button type="button" id="detectLocationBtn" class="btn">Use My Location</button>
+          </div>
+          <div id="locationSuggestions" class="suggestions"></div>
+        </div>
+        <div class="form-row">
+          <label>Subject</label>
+          <select id="subject" required></select>
+        </div>
+        <button type="submit" class="btn primary">Search</button>
+      </form>
+    </section>
+    <section id="results" class="results"></section>
+  </main>
+  <div id="whatsappFab" class="whatsapp-fab" title="Chat on WhatsApp"></div>
+  <script src="assets/app.js"></script>
+  <script src="assets/tutors.js"></script>
+</body>
+</html>
